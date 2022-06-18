@@ -7,6 +7,7 @@ export const AppStyle = styled.div `
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center center;
+  min-height: 100vh;
   
 `
 
@@ -31,7 +32,7 @@ export const HeaderStyle = styled.header `
 `
 
 export const ListStyle = styled.div `
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,7 +41,8 @@ export const ListStyle = styled.div `
 `
 
 export const ProductStyle = styled.div `
-  height: 100%;
+  height: auto;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,7 +51,6 @@ export const ProductStyle = styled.div `
   opacity: 0.9;
   border: 0.5px solid #ddd;
   padding: 20px;
-  width: 30%;
   border-radius: 5px;
   justify-content: space-between;
   gap: 10px;
@@ -92,15 +93,17 @@ export const ProductStyle = styled.div `
     margin: 5px;
   }
 
-  button{
-    background-color: #f5f5f5;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
-    padding: 5px;
-    text-transform: uppercase;
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 5px;
-  }
+ 
+`
+export const ButtonStyle = styled.button `
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px;
+
 `

@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ProductStyle } from '../styles/Styles';
+import { ProductStyle, ButtonStyle } from '../styles/Styles';
 
 // El componente Item no tiene componentes hijos.
 // ESTADO: Item debe tener un número para almacenar la cantidad de stock, la misma se la defina el padre a la hora de crearlo.
@@ -33,7 +33,7 @@ export default function Item({ nombre, img, descripcion, stock, total }) {
         <img src={img} alt='img' />
         <p>{descripcion}</p>
         <h5>Stock: <span> {numStock <= 0 ? 0 : numStock}</span></h5>
-        <button onClick={() => handleClick()}>{numStock <= 0 ? "Sin Stock" : "Comprar"}</button>
+        <ButtonStyle disabled={numStock <= 0 } onClick={() => handleClick()}>{numStock <= 0 ? "Sin Stock" : "Comprar"}</ButtonStyle>
       </div>
     </ProductStyle>
 
